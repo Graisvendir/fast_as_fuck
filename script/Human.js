@@ -1,8 +1,8 @@
 
 class Human {
     constructor(x, y, width, height, src) {
-        this.x = x;
-        this.y = y;
+        this.x = Math.abs(x - width);
+        this.y = Math.abs(y - height);
         this.width = width;
         this.height = height;
         this.img = new Image();
@@ -19,7 +19,7 @@ class Human {
     isBited() {
         return this.bited;
     }
-    draw() {
+    draw(ctx) {
         ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
     }
 }

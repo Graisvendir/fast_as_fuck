@@ -11,20 +11,15 @@ class Bat {
 
     moveRight() {
         this.x += 10;
-        clearCanvas();
     }
     moveLeft() {
         this.x -= 10;
-        clearCanvas();
     }
     moveTop() {
         this.y -= 10;
-        clearCanvas();
     }
     moveBottom() {
         this.y += 10;
-        clearCanvas();
-
     }
     cross(elem) {
         if (this.x >= elem.x && this.x <= (elem.x + elem.width)) {
@@ -82,7 +77,7 @@ class Bat {
 
         }
     }
-    draw() {
+    draw(ctx) {
         ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
     }
 }
